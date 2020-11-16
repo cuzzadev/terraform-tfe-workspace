@@ -3,9 +3,10 @@
 # TFE_HOSTNAME
 
 resource tfe_workspace "this" {
-  name         = var.tfe_workspace_name != "" ? var.tfe_workspace_name : var.repository_name
-  organization = var.tfe_org_name
-  auto_apply   = var.tfe_auto_apply
+  name              = var.tfe_workspace_name != "" ? var.tfe_workspace_name : var.repository_name
+  organization      = var.tfe_org_name
+  auto_apply        = var.tfe_auto_apply
+  working_directory = var.tfe_working_directory
 
   vcs_repo {
     identifier     = var.create_repo == true ? github_repository.this[0].full_name : data.github_repository.this[0].full_name

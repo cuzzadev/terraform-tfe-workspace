@@ -41,6 +41,11 @@ variable tfe_auto_apply {
   default = false
 }
 
+variable tfe_working_directory {
+  type    = string
+  default = ""
+}
+
 variable repository_private {
   type    = bool
   default = false
