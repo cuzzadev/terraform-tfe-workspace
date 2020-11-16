@@ -9,7 +9,7 @@ module "my-repo" {
   oauth_token_id         = var.oauth_token_id 
   source                 = "tfe.humblelab.com/demos/management/workspace"
   version                = "0.0.4"
-  repository_owner       = "Grant Orchard"
+  repository_owner       = "Ben Curran"
   repository_name        = "grim repo"
   repository_slug        = "grim-repo"
   repository_project_key = "demo"
